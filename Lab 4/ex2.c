@@ -19,19 +19,19 @@ void collatz(int x)
 int main()
 {
 	pid_t pid= fork();
-	if(pid<0)
+	if(pid<0)//tratez eroarea
 		return -1;
-	else if(pid==0)
+	else if(pid==0)//instructiuni pentru procesul copil
 	{
 		int x;
-		scanf("%d", &x);
+		scanf("%d", &x);//citesc argumentul
 		printf("%d: ", x);
-		collatz(x);
+		collatz(x);//apelez functia corespunzatoare
 		printf("\n");
 	}
-	else
+	else//instructiuni pentru procesul parinte
 	{
-		pid_t cpid =wait(NULL);
+		pid_t cpid=wait(NULL);
 		printf("Child %d finished\n", getppid());
 	}
 	return 0;

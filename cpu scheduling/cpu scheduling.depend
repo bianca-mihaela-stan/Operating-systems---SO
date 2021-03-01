@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1611734823 source:e:\github\operating-systems---so\examen\cpu scheduling\main.cpp
+	<iostream>
+	<algorithm>
+	<bits/stdc++.h>
+

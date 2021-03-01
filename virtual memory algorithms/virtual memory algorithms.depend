@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1611732635 source:e:\github\operating-systems---so\examen\virtual memory algorithms\main.cpp
+	<iostream>
+	<bits/stdc++.h>
+

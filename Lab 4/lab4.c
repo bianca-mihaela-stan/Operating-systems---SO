@@ -3,7 +3,7 @@
 #include <unistd.h>
 #include <stdlib.h>
 #include <sys/wait.h>
- 
+
 void collatz(int x)
 {
 	printf("%d ", x);
@@ -17,9 +17,9 @@ void collatz(int x)
 			collatz(3*x+1);
 		}
 }
- 
- 
- 
+
+
+
 int main(int argc, char *argv[])
 {
 	//Aceasta este varianta in care am un singur proces parinte, cu n copii pe care ii asteapta sa termine de procesat.
@@ -40,15 +40,15 @@ int main(int argc, char *argv[])
 		}
 		if(child[i]<0)
 		{
-			return -1;	
+			return -1;
 		}
 	}
 	for(int i=1; i<argc; i++)
 	{
 		wait(NULL);
 		printf("Child PID=%d from parent PID=%d is done\n", getpid(), getppid());
-	}	
- 
- 
+	}
+
+
 	return 0;
 }
